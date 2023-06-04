@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #24232c;
+}
+
+#root {
+  width: 540px;
+  border: 1px solid white;
+  margin: 5rem auto;
+}
