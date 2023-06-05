@@ -1,10 +1,9 @@
 import { useState } from 'react';
 
-
+import { AppContainer, InputContainer, BodyContainer }  from './components/visualComponents/AppContainer';
 import Heading from './components/visualComponents/Heading';
-import Container from './components/visualComponents/Container';
 import PasswordGenerator from './components/functionalComponents/PasswordGenerator';
-import TextField from './components/visualComponents/TextField';
+import TextField from './components/functionalComponents/TextField';
 import PasswordStrength from './components/functionalComponents/PasswordStrength';
 // import Button from './components/visualComponents/Button';
 
@@ -20,12 +19,16 @@ function App() {
   return (
     <>
       <Heading>Password Generator</Heading>
-      <Container>
-        <TextField type='value' value={password} onChange={handlePasswordChange} />
-        <PasswordStrength password={password} />
-        <PasswordGenerator onPasswordChange={setPassword} />
-  
-      </Container>
+      <AppContainer>
+        <InputContainer>
+          <TextField type='value' value={password} onChange={handlePasswordChange} />
+        </InputContainer>
+        <BodyContainer>
+          <PasswordGenerator onPasswordChange={setPassword} />
+          <PasswordStrength password={password} />
+
+        </BodyContainer>
+      </AppContainer>
     </>
   )
 }

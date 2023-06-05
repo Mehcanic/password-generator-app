@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  background-color: #f1f1f1;
-  border: none;
-  color: black;
-  padding: 10px 20px;
+  background-color: #a4ffaf;
+  color: #24232C;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin: 4px auto;
+  padding: 10px 20px;
+  width: 476px;
+  height: 65px;
   cursor: pointer;
 `;
 

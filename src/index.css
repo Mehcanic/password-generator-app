@@ -6,11 +6,11 @@
 
 body {
   font-family: 'JetBrains Mono', monospace;
-  background-color: #24232c;
+  background-color: #08070B;
 }
 
 #root {
   width: 540px;
-  border: 1px solid white;
+  border: 1px solid red;
   margin: 5rem auto;
 }

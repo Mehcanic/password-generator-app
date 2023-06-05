@@ -12,6 +12,7 @@ export const SliderLabel = styled.label`
   justify-content: space-between;
   align-items: center;
   width: 476px;
+  margin-top: 23px;
   margin-bottom: 32px;
   `;
 
@@ -23,7 +24,7 @@ export const SliderParagraph = styled.p`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   padding: 10px 0;
   color: #E6E5EA;
 

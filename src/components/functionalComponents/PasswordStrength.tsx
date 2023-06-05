@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { StrengthBar, StrengthBarFill, StrengthContainer } from './PasswordStrength.styles';
+
 interface PasswordStrengthProps {
   password: string;
 }
@@ -13,7 +15,7 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ password }) => {
 
   function checkPasswordStrength(password: string) {
     let strength = 0;
-    if (password.length > 12) strength++;
+    if (password.length >= 12) strength++;
     if (password.match(/[a-z]+/)) strength++;
     if (password.match(/[A-Z]+/)) strength++; 
     if (password.match(/[0-9]+/)) strength++;
@@ -21,30 +23,28 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ password }) => {
 
     switch(strength) {
       case 0:
-        setStrength('Very weak');
+        setStrength('TOO WEAK!');
         break;
       case 1:
-        setStrength('Weak');
+        setStrength('WEAK');
         break;
       case 2:
-        setStrength('Better');
-        break;
-      case 3:
-        setStrength('Medium');
-        break;
-      case 4:
-        setStrength('Strong');
+        setStrength('MEDIUM');
         break;
       default:
-        setStrength('Very strong');
+        setStrength('STRONG');
         break;
     }
   }
 
   return (
-    <div>
-      <p>{strength}</p>
-    </div>
+    <StrengthContainer>
+      <p>STRENGTH</p>
+      <StrengthBar>
+        <p>{strength}</p>
+        <StrengthBarFill strength={strength} />
+      </StrengthBar>
+    </StrengthContainer>
   );
 };
 

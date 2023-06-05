@@ -12,8 +12,8 @@ export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
 
   /* Custom checkbox style */
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 
   /* Hide the checkbox visually */
   &::before {
@@ -24,44 +24,40 @@ export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
     width: 100%;
     height: 100%;
     border: 2px solid #E6E5EA;
-    border-radius: 4px;
     background-color: #18171F;
     transition: background-color 0.2s ease-in-out;
   }
 
-  /* SVG as checkbox */
   &::after {
     content: url('./icon-check.svg');
     position: absolute;
     top: 5px;
-    left: 5px;
-    width: 16px;
-    height: 16px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
   }
 
-  /* Checked state */
+
   &:checked::before {
     background-color: #a4ffaf;
+    border-color: #a4ffaf;
   }
 
-  /* Show the SVG when checked */
   &:checked::after {
     opacity: 1;
   }
 
-  /* Hover state */
   &:hover::before {
-    background-color: #36353F;
+    border-color: #a4ffaf;
   }
 
-  /* Checked and Hover state */
   &:checked:hover::before {
     background-color: #a4ffaf;
+    border-color: #a4ffaf;
   }
 
-  /* Indeterminate state */
   &:indeterminate::before {
     background-color: #a4ffaf;
   }
@@ -70,8 +66,8 @@ export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
 export const CheckBoxLabel = styled.label`
   display: flex;
   justify-content: start;
-  align-items: center;
-  width: 100%;
+  align-items: top;
+  width: 476px;
   margin-bottom: 20px;
 `;
 
@@ -81,4 +77,5 @@ export const CheckBoxParagraph = styled.p`
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
+  margin-left: 30px;
 `;

@@ -36,7 +36,7 @@ const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange 
         <Slider
           type="range"
           min={1}
-          max={20}
+          max={18}
           value={length}
           onChange={(e) => setLength(Number(e.target.value))}
         />
