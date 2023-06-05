@@ -1,9 +1,8 @@
-import styled from "styled-components";
-import IconCheck from "../../svgs/IconCheck";
+// CheckBox.tsx
+import styled from 'styled-components';
 
 export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
-/* Hide the default checkbox */
-appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: none;
@@ -32,21 +31,21 @@ appearance: none;
 
   /* SVG as checkbox */
   &::after {
-    content: '';
+    content: url('./icon-check.svg');
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 5px;
+    left: 5px;
     width: 16px;
     height: 16px;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    
   }
 
   /* Checked state */
   &:checked::before {
     background-color: #a4ffaf;
   }
+
   /* Show the SVG when checked */
   &:checked::after {
     opacity: 1;
@@ -66,17 +65,15 @@ appearance: none;
   &:indeterminate::before {
     background-color: #a4ffaf;
   }
-  `;
-
+`;
 
 export const CheckBoxLabel = styled.label`
   display: flex;
   justify-content: start;
   align-items: center;
-
   width: 100%;
   margin-bottom: 20px;
-  `;
+`;
 
 export const CheckBoxParagraph = styled.p`
   color: #E6E5EA;
@@ -84,5 +81,4 @@ export const CheckBoxParagraph = styled.p`
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
-
 `;
