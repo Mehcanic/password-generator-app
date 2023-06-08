@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { StrengthBar, StrengthBarFill, StrengthContainer } from './PasswordStrength.styles';
+import { StrengthContainer, StrengthBar, StrengthBarFill } from './PasswordStrength.style';
 
 interface PasswordStrengthProps {
   password: string;
@@ -42,7 +42,7 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ password }) => {
       <p>STRENGTH</p>
       <StrengthBar>
         <p>{strength}</p>
-        <StrengthBarFill strength={strength} />
+        <StrengthBarFill />
       </StrengthBar>
     </StrengthContainer>
   );
