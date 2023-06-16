@@ -4,8 +4,6 @@ import { AppContainer, InputContainer, BodyContainer } from './components/visual
 import Heading from './components/visualComponents/Heading';
 import PasswordGenerator from './components/PasswordGenerator/PasswordGenerator';
 import TextField from './components/TextField/TextField';
-import PasswordStrength from './components/PasswordStrength/PasswordStrength';
-// import Button from './components/visualComponents/Button';
 
 
 function App() {
@@ -24,9 +22,7 @@ function App() {
           <TextField type='value' value={password} onChange={handlePasswordChange} />
         </InputContainer>
         <BodyContainer>
-          <PasswordGenerator onPasswordChange={setPassword} />
-          <PasswordStrength password={password} />
-
+          <PasswordGenerator onPasswordChange={setPassword} password={password} />
         </BodyContainer>
       </AppContainer>
     </>

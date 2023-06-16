@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import Button from '../visualComponents/Button';
 import { CheckBox, CheckBoxLabel, CheckBoxParagraph } from '../visualComponents/CheckBox';
 import { Slider, SliderLabel, SliderParagraph } from '../visualComponents/Slider';
+import { PasswordGeneratorContainer } from './PasswordGenerator.styles';
+
+import PasswordStrength from '../PasswordStrength/PasswordStrength'
 
 interface PasswordGeneratorProps {
   onPasswordChange: (password: string) => void;
+  password: string;
 }
 
-const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange }) => {
+const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange, password }) => {
   const [length, setLength] = useState(0);
   const [hasUpperCase, setHasUpperCase] = useState(false);
   const [hasLowerCase, setHasLowerCase] = useState(false);
@@ -30,12 +34,12 @@ const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange 
   }
 
   return (
-    <div>
+    <PasswordGeneratorContainer>
       <SliderLabel>
         <SliderParagraph>Character Length <span>{length}</span></SliderParagraph>
         <Slider
           type="range"
-          min={1}
+          min={0}
           max={18}
           value={length}
           onChange={(e) => setLength(Number(e.target.value))}
@@ -74,9 +78,9 @@ const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange 
         <CheckBoxParagraph>Include Symbols</CheckBoxParagraph>
       </CheckBoxLabel>
 
-
+      <PasswordStrength password={password} />
       <Button onClick={() => generatePassword()}>Generate</Button>
-    </div>
+    </PasswordGeneratorContainer>
   );
 };
 

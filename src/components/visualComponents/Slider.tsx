@@ -11,9 +11,11 @@ export const SliderLabel = styled.label`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 476px;
+  min-width: 313px;
+  max-width: 476px;
   margin-top: 23px;
   margin-bottom: 32px;
+  
   `;
 
 export const SliderParagraph = styled.p`

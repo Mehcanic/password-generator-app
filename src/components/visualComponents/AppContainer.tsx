@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const AppContainer = styled.div`
 
-  /* background-color: #24232C; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid white;
   width: 540px;
-  /* max-height: 632px; */
+  margin-inline: auto;
+
+  @media (max-width: 460px) {
+    width: 343px;
+    
+  }
 
 `;
 
@@ -22,10 +25,14 @@ export const InputContainer = styled.div`
 `;
 
 export const BodyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
   background-color: #24232C;
 
   width: 100%;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: 0 20px;
   
 `;

@@ -8,11 +8,16 @@ const Button = styled.button`
   font-size: 18px;
   font-weight: bold;
   border: none;
-  margin: 4px auto;
+  margin: 0 auto 32px auto;
   padding: 10px 20px;
   width: 476px;
   height: 65px;
   cursor: pointer;
+
+  @media (max-width: 460px) {
+    width: 311px;
+    
+  }
 `;
 
 export default Button;

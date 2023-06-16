@@ -11,6 +11,5 @@ body {
 
 #root {
   width: 540px;
-  border: 1px solid red;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }

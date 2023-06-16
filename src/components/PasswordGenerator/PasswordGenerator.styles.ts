@@ -1,8 +1,6 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 
-export const StrengthContainer = styled.div`
-`
-
-export const StrengthBar = styled.div`
+export const PasswordGeneratorContainer = styled.div`
+  margin-inline: auto;
 `
