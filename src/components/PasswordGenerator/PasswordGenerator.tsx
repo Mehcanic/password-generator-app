@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../visualComponents/Button';
 import { CheckBox, CheckBoxLabel, CheckBoxParagraph } from '../visualComponents/CheckBox';
-import {Slider, SliderLabel, SliderParagraph} from '../visualComponents/Slider';
+import { Slider, SliderLabel, SliderParagraph } from '../visualComponents/Slider';
 
 interface PasswordGeneratorProps {
   onPasswordChange: (password: string) => void;
@@ -70,7 +70,7 @@ const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange 
           type="checkbox"
           checked={hasSymbols}
           onChange={(e) => setHasSymbols(e.target.checked)}
-        /> 
+        />
         <CheckBoxParagraph>Include Symbols</CheckBoxParagraph>
       </CheckBoxLabel>
 

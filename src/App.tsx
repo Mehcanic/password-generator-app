@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import { AppContainer, InputContainer, BodyContainer }  from './components/visualComponents/AppContainer';
+import { AppContainer, InputContainer, BodyContainer } from './components/visualComponents/AppContainer';
 import Heading from './components/visualComponents/Heading';
-import PasswordGenerator from './components/functionalComponents/PasswordGenerator';
-import TextField from './components/functionalComponents/TextField';
-import PasswordStrength from './components/functionalComponents/PasswordStrength';
+import PasswordGenerator from './components/PasswordGenerator/PasswordGenerator';
+import TextField from './components/TextField/TextField';
+import PasswordStrength from './components/PasswordStrength/PasswordStrength';
 // import Button from './components/visualComponents/Button';
 
 

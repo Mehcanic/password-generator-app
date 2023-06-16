@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
-import { StrengthContainer, StrengthBar, StrengthBarFill } from './PasswordStrength.style';
+import { StrengthBar, StrengthContainer } from './PasswordStrength.styles';
+import StrengthBarFill from '../StrengthBarFill/StrengthBarFill'
 
 interface PasswordStrengthProps {
   password: string;
@@ -17,11 +17,11 @@ const PasswordStrength: React.FC<PasswordStrengthProps> = ({ password }) => {
     let strength = 0;
     if (password.length >= 12) strength++;
     if (password.match(/[a-z]+/)) strength++;
-    if (password.match(/[A-Z]+/)) strength++; 
+    if (password.match(/[A-Z]+/)) strength++;
     if (password.match(/[0-9]+/)) strength++;
     if (password.match(/[\u0020-\u007E\u00A0-\u00FF\u0100-\u017F]+/)) strength++;
 
-    switch(strength) {
+    switch (strength) {
       case 0:
         setStrength('TOO WEAK!');
         break;
