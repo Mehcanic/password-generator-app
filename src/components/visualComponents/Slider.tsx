@@ -5,7 +5,7 @@ interface SliderProps {
   min: number;
   max: number;
 }
-
+// TODO fix hoover on mobile so the background comesback to proper white color
 export const SliderLabel = styled.label`
   display: flex;
   flex-direction: column;
@@ -35,6 +35,16 @@ export const SliderParagraph = styled.p`
       font-weight: bold;
       color: #a4ffaf;
     }
+
+    @media (max-width: 460px) {
+    font-size: 16px;
+    margin-bottom: 8px;
+
+    span {
+      font-size: 24px;
+    }
+    
+  }
   `;
 
 export const Slider = styled.input.attrs<SliderProps>({ type: 'range' })<SliderProps>`
@@ -45,6 +55,11 @@ export const Slider = styled.input.attrs<SliderProps>({ type: 'range' })<SliderP
   border-radius: 5px;
   background: #18171F;
   outline: none;
+
+  @media (max-width: 460px) {
+    width: 311px;
+    
+  }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
