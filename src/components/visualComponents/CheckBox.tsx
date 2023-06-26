@@ -1,6 +1,32 @@
 // CheckBox.tsx
 import styled from 'styled-components';
 
+export const CheckBoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 16px;
+`
+
+export const CheckBoxLabel = styled.label`
+  display: flex;
+  justify-content: start;
+  align-items: top;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  padding-left: 16px; 
+  cursor: pointer;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 460px) {
+    padding-left: 0;
+  }
+`;
+
 export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
   appearance: none;
   -webkit-appearance: none;
@@ -61,14 +87,11 @@ export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
   &:indeterminate::before {
     background-color: #a4ffaf;
   }
-`;
 
-export const CheckBoxLabel = styled.label`
-  display: flex;
-  justify-content: start;
-  align-items: top;
-  width: 476px;
-  margin-bottom: 20px;
+  @media (max-width: 460px) {
+    font-size: 16px;
+    
+  }
 `;
 
 export const CheckBoxParagraph = styled.p`
@@ -77,5 +100,10 @@ export const CheckBoxParagraph = styled.p`
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
-  margin-left: 30px;
+  margin-left: 24px;
+
+  @media (max-width: 460px) {
+    font-size: 16px;
+    margin-left: 20px;
+  }
 `;

@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 
 export const PasswordGeneratorContainer = styled.div`
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
   width: 100%;
 `

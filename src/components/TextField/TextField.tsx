@@ -25,6 +25,7 @@ function TextField({ type, value, onChange }: TextFieldProps) {
   return (
     <TextFieldContainer>
       <Input
+        name='password'
         type={type}
         value={value}
         onChange={onChange}

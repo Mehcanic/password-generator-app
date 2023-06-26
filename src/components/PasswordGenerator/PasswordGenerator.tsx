@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../visualComponents/Button';
-import { CheckBox, CheckBoxLabel, CheckBoxParagraph } from '../visualComponents/CheckBox';
+import { CheckBoxContainer, CheckBox, CheckBoxLabel, CheckBoxParagraph } from '../visualComponents/CheckBox';
 import { Slider, SliderLabel, SliderParagraph } from '../visualComponents/Slider';
 import { PasswordGeneratorContainer } from './PasswordGenerator.styles';
 
@@ -45,40 +45,47 @@ const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onPasswordChange,
           onChange={(e) => setLength(Number(e.target.value))}
         />
       </SliderLabel>
-      <CheckBoxLabel>
-        <CheckBox
-          type="checkbox"
-          checked={hasUpperCase}
-          onChange={(e) => setHasUpperCase(e.target.checked)}
-        />
-        <CheckBoxParagraph>Include Uppercase Letters</CheckBoxParagraph>
-      </CheckBoxLabel>
-      <CheckBoxLabel>
-        <CheckBox
-          type="checkbox"
-          checked={hasLowerCase}
-          onChange={(e) => setHasLowerCase(e.target.checked)}
-        />
-        <CheckBoxParagraph>Include Lowercase Letters</CheckBoxParagraph>
-      </CheckBoxLabel>
-      <CheckBoxLabel>
-        <CheckBox
-          type="checkbox"
-          checked={hasNumbers}
-          onChange={(e) => setHasNumbers(e.target.checked)}
-        />
-        <CheckBoxParagraph>Include Numbers</CheckBoxParagraph>
-      </CheckBoxLabel>
-      <CheckBoxLabel>
-        <CheckBox
-          type="checkbox"
-          checked={hasSymbols}
-          onChange={(e) => setHasSymbols(e.target.checked)}
-        />
-        <CheckBoxParagraph>Include Symbols</CheckBoxParagraph>
-      </CheckBoxLabel>
+      
+      <CheckBoxContainer>
+        <CheckBoxLabel>
+          <CheckBox
+            name="checkbox"
+            type="checkbox"
+            checked={hasUpperCase}
+            onChange={(e) => setHasUpperCase(e.target.checked)}
+            />
+          <CheckBoxParagraph>Include Uppercase Letters</CheckBoxParagraph>
+        </CheckBoxLabel>
+        <CheckBoxLabel>
+          <CheckBox
+            name="checkbox"
+            type="checkbox"
+            checked={hasLowerCase}
+            onChange={(e) => setHasLowerCase(e.target.checked)}
+            />
+          <CheckBoxParagraph>Include Lowercase Letters</CheckBoxParagraph>
+        </CheckBoxLabel>
+        <CheckBoxLabel>
+          <CheckBox
+            name="checkbox"
+            type="checkbox"
+            checked={hasNumbers}
+            onChange={(e) => setHasNumbers(e.target.checked)}
+            />
+          <CheckBoxParagraph>Include Numbers</CheckBoxParagraph>
+        </CheckBoxLabel>
+        <CheckBoxLabel>
+          <CheckBox
+            name="checkbox"
+            type="checkbox"
+            checked={hasSymbols}
+            onChange={(e) => setHasSymbols(e.target.checked)}
+            />
+          <CheckBoxParagraph>Include Symbols</CheckBoxParagraph>
+        </CheckBoxLabel>
+      </CheckBoxContainer>
 
-      <PasswordStrength password={password} />
+      <PasswordStrength password={password} isFilled={true} />
       <Button onClick={() => generatePassword()}>Generate</Button>
     </PasswordGeneratorContainer>
   );

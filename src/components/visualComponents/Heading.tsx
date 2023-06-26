@@ -8,6 +8,11 @@ const Heading = styled.h1`
   margin: 0 auto;
   padding: 2rem 0;
   color: #817D92;
+
+  @media (max-width: 460px) {
+    font-size: 16px;
+    padding: 2rem 0 1rem 0;
+  }
 `
 
 
