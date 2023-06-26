@@ -26,6 +26,10 @@ const Input = styled.input`
     mix-blend-mode: normal;
     opacity: 0.25;
   }
+
+  @media (max-width: 460px) {
+    font-size: 24px;
+  }
 `;
 
 const CopyContainer = styled.div`
